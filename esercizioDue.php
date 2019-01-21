@@ -8,7 +8,7 @@
 
   $lunghezzaStringa = strlen($paragrafo);
 
-  $badword = "Come";
+  $badword = $_GET['parola'];
 
   echo $paragrafo;
 
