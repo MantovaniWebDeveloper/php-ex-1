@@ -8,7 +8,7 @@
 
   $lunghezzaStringa = strlen($paragrafo);
 
-  $badword = "FIA";
+  $badword = "la";
 
   echo $paragrafo;
 
@@ -18,6 +18,32 @@
 
   echo "La lunghezza della stringa è: $lunghezzaStringa";
 
+  echo "<br />";
 
+  echo "<br />";
+  //cerco ora la string da Censurare
+
+  $ricerca = strpos($paragrafo, $badword);
+
+  echo "<br />";
+
+  echo "<br />";
+
+  if($ricerca) {
+    //stringa trovata
+    $paragrafoCensurato = str_replace($badword,"***",$paragrafo);
+    echo "FRASE CENSURATA";
+
+    echo "<br />";
+
+    echo "<br />";
+
+    echo $paragrafoCensurato;
+
+  }
+  else {
+    //string non trovata
+    echo "non ho trovato nessuna parola da censurare";
+  }
 
  ?>
