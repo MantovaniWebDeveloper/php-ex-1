@@ -8,7 +8,7 @@
 
   $lunghezzaStringa = strlen($paragrafo);
 
-  $badword = "la";
+  $badword = "Come";
 
   echo $paragrafo;
 
@@ -24,12 +24,14 @@
   //cerco ora la string da Censurare
 
   $ricerca = strpos($paragrafo, $badword);
+  //controllo il valore di uscita di ricerca
+  echo $ricerca;
 
   echo "<br />";
 
   echo "<br />";
 
-  if($ricerca) {
+  if($ricerca !== false) {
     //stringa trovata
     $paragrafoCensurato = str_replace($badword,"***",$paragrafo);
     echo "FRASE CENSURATA";
